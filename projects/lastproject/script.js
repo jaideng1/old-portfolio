@@ -17,10 +17,10 @@ function setup() {
   createCanvas(500,500);
   colorMode(HSB, 100);
   noStroke()
-  drawthething(); 
+  drawTheFractal(); 
 }
 
-function drawthething() {
+function drawTheFractal() {
   
   for (let i = -250+offset.x; i < 250+offset.x; i++) {
     for (let j = -250+offset.y; j < 250+offset.y; j++) {
