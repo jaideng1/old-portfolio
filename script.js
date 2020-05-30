@@ -1,8 +1,20 @@
 
 const inDevelopment = true;
+var mainContent = "";
 
-var strHTML = "";
-if (inDevelopment) {
-    strHTML = document.querySelector('body').innerHTML;
-    document.querySelector('body').innerHTML = "<h2>Sorry!</h2><br/><h3>The website is still in development.<br/><a href=\"https://github.com/jaideng1\">To GitHub Page</a></h3>";
+//setup
+function setup() {
+    
+    if (inDevelopment) {
+        strHTML = document.querySelector('#main-content').innerHTML;
+        document.querySelector('#main-content').innerHTML = "<h2>Sorry!</h2><br/><h3>The website is still in development.<br/><a href=\"https://github.com/jaideng1\">To GitHub Page</a></h3>";
+        return;
+    }
+    strHTML = document.querySelector('#main-content').innerHTML;
+    document.querySelector('#main-content').innerHTML = "";
+    createCanvas(document.clientWidth, document.clientHeight);
+}
+
+function draw() {
+    
 }
