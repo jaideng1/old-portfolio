@@ -15,7 +15,7 @@ function setup() {
     }
     strHTML = document.querySelector('#main-content').innerHTML;
     document.querySelector('#main-content').innerHTML = "";
-    createCanvas(document.clientWidth, document.clientHeight);
+    createCanvas(document.body.clientWidth, document.body.clientHeight);
 }
 
 var WIDTH = document.clientWidth;
