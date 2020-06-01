@@ -32,7 +32,7 @@ function draw() {
         if (frame % 180 < 90) {
             textbar = "▮";
         }
-        textSize(document.clientHeight / 30)
-        text("> " + textbar, document.clientWidth / 20, document.clientHeight / 20);
+        textSize(30)
+        text("> " + textbar, 50, 50);
     }
 }
