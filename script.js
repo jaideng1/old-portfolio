@@ -28,6 +28,7 @@ let introStorage = {
 
 function draw() {
     if (inIntro) {
+        background(255);
         frame++;
         let textbar = "";
         if (frame % 180 == 0) {
