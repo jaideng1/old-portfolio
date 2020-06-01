@@ -47,7 +47,7 @@ function draw() {
 document.onkeypress = function(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
-    console.log(charCode);
+    console.log(evt.key);
     if (charCode == 8) {
         if (introStorage.text.split('').length > 0) {
             let temptxt = introStorage.text.split('');
