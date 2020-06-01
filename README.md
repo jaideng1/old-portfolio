@@ -6,7 +6,7 @@ Go [*here*](https://jaideng1.github.io) for the website.
 
 *I used to use a different username, but I changed it due some personal reasons.*
 
-I guess I go by jaideng1, or just jaideng, I was suprised that I could use it. I like to code and stuff, been doing it for about 5 years, as of 2020.
+I guess I go by jaideng1, or just jaideng, I was suprised that I could use it. I like to code and make stuff, been doing it for about 5 years, as of 2020.
 
 # Languages
 
