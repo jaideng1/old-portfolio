@@ -22,18 +22,24 @@ var WIDTH = document.clientWidth;
 var HEIGHT = document.clientHeight;
 
 let introStorage = {
-    
+    text: "",
+    displayTextBar: true,
 };
 
 function draw() {
     if (inIntro) {
         frame++;
         let textbar = "";
-        if (frame % 180 < 90) {
+        if (frame % 180 == 0) {
+            introStorage.displayTextBar = true;
+        } else if (frame % 180 == 90) {
+            introStorage.displayTextBar = false;
+        }
+        if (introStorage.displayTextBar) {
             textbar = "▮";
         }
         textSize(30)
-        text("> " + textbar, 50, 50);
+        text("> " + introStorage.text + textbar, 50, 50);
     }
 }
 
@@ -41,5 +47,7 @@ document.onkeypress = function(evt) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
-    alert(charStr);
+    if (inIntro) {
+        introStorage.text += charStr;
+    }
 };
