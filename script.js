@@ -74,7 +74,7 @@ document.onkeydown = function(e) {
     var key = e.key;
     
     if (inIntro) {
-        if (blacklistKeys.contains(key)) {
+        if (blacklistKeys.includes(key)) {
             return;
         }
         if (key == "Backspace") {
