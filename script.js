@@ -37,7 +37,7 @@ function draw() {
             introStorage.displayTextBar = false;
         }
         if (introStorage.displayTextBar) {
-            textbar = "▮";
+            textbar = "_";
         }
         textSize(30)
         text("> " + introStorage.text + textbar, 50, 50);
