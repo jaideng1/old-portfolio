@@ -26,6 +26,32 @@ let introStorage = {
     displayTextBar: true,
 };
 
+let blacklistKeys = [
+    "CapsLock",
+    "Shift",
+    "Tab",
+    "ArrowLeft",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowRight",
+    "Meta",
+    "Alt",
+    "Control",
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "F9",
+    "F10",
+    "F11",
+    "F12",
+    "Escape"
+];
+
 function draw() {
     if (inIntro) {
         background(255);
@@ -48,12 +74,18 @@ document.onkeydown = function(e) {
     var key = e.key;
     
     if (inIntro) {
+        if (blacklistKeys.contains(key)) {
+            return;
+        }
         if (key == "Backspace") {
             if (introStorage.text.split('').length > 0) {
                 let temptxt = introStorage.text.split('');
                 temptxt.pop();
                 introStorage.text = temptxt.join('');
             }
+            return;
+        }
+        if (key == "Enter") {
             return;
         }
         introStorage.text += key;
