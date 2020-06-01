@@ -44,19 +44,18 @@ function draw() {
     }
 }
 
-document.onkeypress = function(evt) {
-    evt = evt || window.event;
-    var charCode = evt.keyCode || evt.which;
-    console.log(evt.key);
-    if (charCode == 8) {
-        if (introStorage.text.split('').length > 0) {
-            let temptxt = introStorage.text.split('');
-            temptxt.pop();
-            introStorage.text = temptxt.join('');
-        }
-    }
-    var charStr = String.fromCharCode(charCode);
+document.onkeydown = function(e) {
+    var key = e.key;
+    
     if (inIntro) {
-        introStorage.text += charStr;
+        if (key == "Backspace") {
+            if (introStorage.text.split('').length > 0) {
+                let temptxt = introStorage.text.split('');
+                temptxt.pop();
+                introStorage.text = temptxt.join('');
+            }
+            return;
+        }
+        introStorage.text += key;
     }
 };
