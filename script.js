@@ -31,9 +31,9 @@ function draw() {
         background(255);
         frame++;
         let textbar = "";
-        if (frame % 180 == 0) {
+        if (frame % 120 == 0) {
             introStorage.displayTextBar = true;
-        } else if (frame % 180 == 90) {
+        } else if (frame % 120 == 60) {
             introStorage.displayTextBar = false;
         }
         if (introStorage.displayTextBar) {
