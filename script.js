@@ -30,7 +30,10 @@ function setup() {
 
 let introStorage = {
     text: "",
-    displayTextBar: true,
+    displayTextBar: true, //for blinking
+    ableToType: false,
+    showTextBar: false, //show textbar with typing thing
+    textUnder: "",
 };
 
 let blacklistKeys = [
@@ -76,9 +79,21 @@ function draw() {
         textFont(cmdFontRegular);
         stroke(255);
         fill(255);
-        text("> " + introStorage.text + textbar, 50, 50);
+        text("WebOS v1.0.3, made by jaideng1. Type in 'help', or 'pass'.", 50, 50);
+      
+        if (introStorage.showTextBar) {
+          text("> " + introStorage.text + textbar, 50, 130);
+        } else {
+          text("> " + introStorage.text, 50, 130);
+        }
+        
+        text(introStorage.textUnder, 50, 150);
+        
     }
 }
+
+//haha, laugh at me all you want. i know this is unsecure alright? i just want a tiny bit of protection.
+const PASS_TO_WEBSITE = "J41D3NGI";
 
 document.onkeydown = function(e) {
     var key = e.key;
@@ -95,9 +110,38 @@ document.onkeydown = function(e) {
             }
             return;
         }
-        if (key == "Enter") {
+        if (key == "Enter" && introStorage.ableToType) {
+            if (introStorage.text == "") {
+              return;
+            }
+            if (introStorage.text == "pass ") {
+              let p = introStorage.text.replace('pass ', '');
+              if (p == PASS_TO_WEBSITE) {
+                //display text
+                /*
+                Password correct.
+                <wait 750 milliseconds>
+                Joining <250mi> . <250mi> . <250mi> . (in this time, background fades to white)
+                <do join animation>
+                (mouse comes out of corner, "clicks" on bottom right, and "drags" over to top left, as if it's selecting something in an image)
+                (delete key sound plays, as the white thing dissapears, making windows computer appear)
+                (mouse goes to finder, opens it, and finder window appears)
+                (clicks on "reboot_to_website.exe", and then screen goes to black, turns back on after 5 seconds, and shows window reboot thing.)
+                (after 5 seconds, it stops, and fades to white)
+                (reveal the website)
+                */
+              } else {
+                //display message under
+              }
+            } else if (introStorage.text == "help") {
+              //display message under
+            }
+            introStorage.text = "";
             return;
         }
-        introStorage.text += key;
+        if (introStorage.ableToType) {
+            introStorage.text += key;
+        }
+        
     }
 };
