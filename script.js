@@ -34,6 +34,10 @@ let introStorage = {
     ableToType: true,
     showTextBar: true, //show textbar with typing thing
     textUnder: "",
+    timerToClear: setTimeout(function() {
+      introStorage.textUnder = "";
+    }, 1),
+    
 };
 
 let blacklistKeys = [
@@ -134,9 +138,25 @@ document.onkeydown = function(e) {
                 */
               } else {
                 //display message under
+                introStorage.timerToClear.clearTimeout();
+                introStorage.textUnder = "Wrong passcode."
+                introStorage.timerToClear = setTimeout(function() {
+                  introStorage.textUnder = "";
+                }, 1500),
               }
             } else if (introStorage.text == "help") {
               //display message under
+              introStorage.timerToClear.clearTimeout();
+              introStorage.textUnder = "Enter passcode to website. EXAMPLE: 'pass password'."
+              introStorage.timerToClear = setTimeout(function() {
+                introStorage.textUnder = "";
+              }, 3000),
+            } else {
+              introStorage.timerToClear.clearTimeout();
+              introStorage.textUnder = "Command has either been disabled or does not exist.";
+              introStorage.timerToClear = setTimeout(function() {
+                introStorage.textUnder = "";
+              }, 1500),
             }
             introStorage.text = "";
             return;
