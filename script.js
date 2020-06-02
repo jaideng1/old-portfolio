@@ -10,6 +10,9 @@ function preload() {
   cmdFontRegular = loadFont('assets/Source_Code_Pro/SourceCodePro-Regular.ttf');
 }
 
+const WIDTH = window.innerWidth - 20;
+const HEIGHT = window.innerHeight - 20;
+
 //setup
 function setup() {
     
@@ -21,11 +24,9 @@ function setup() {
     }
     strHTML = document.querySelector('#main-content').innerHTML;
     document.querySelector('#main-content').innerHTML = "";
-    createCanvas(document.body.clientWidth, document.body.clientHeight);
+    createCanvas(WIDTH, HEIGHT);
 }
 
-var WIDTH = document.clientWidth;
-var HEIGHT = document.clientHeight;
 
 let introStorage = {
     text: "",
