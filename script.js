@@ -93,7 +93,7 @@ function draw() {
           text("webos:~ jaideng1$ " + introStorage.text, 50, 130);
         }
         
-        text(introStorage.textUnder, 50, 150);
+        text(introStorage.textUnder, 50, 210);
         
     }
 }
