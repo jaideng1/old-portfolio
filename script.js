@@ -66,6 +66,7 @@ function draw() {
             textbar = "_";
         }
         textSize(30)
+        textFont('Helvetica Monospaced')
         text("> " + introStorage.text + textbar, 50, 50);
     }
 }
