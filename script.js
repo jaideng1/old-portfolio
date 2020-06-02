@@ -4,6 +4,12 @@ var mainContent = "";
 var frame = 0;
 var inIntro = true;
 
+//preload
+let cmdFontRegular;
+function preload() {
+  cmdFontRegular = loadFont('assets/Source_Code_Pro/SourceCodePro-Regular.ttf');
+}
+
 //setup
 function setup() {
     
@@ -66,7 +72,7 @@ function draw() {
             textbar = "_";
         }
         textSize(30)
-        textFont('Helvetica Monospaced')
+        textFont(cmdFontRegular);
         text("> " + introStorage.text + textbar, 50, 50);
     }
 }
