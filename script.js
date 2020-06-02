@@ -72,8 +72,10 @@ function draw() {
         } else if (frame % 120 == 60) {
             introStorage.displayTextBar = false;
         }
-        if (introStorage.displayTextBar) {
+        if (introStorage.displayTextBar && introStorage.text.length < 40) {
             textbar = "_";
+        } else if (introStorage.displayTextBar) {
+            textbar = "■";
         }
         textSize(30)
         textFont(cmdFontRegular);
@@ -140,7 +142,10 @@ document.onkeydown = function(e) {
             return;
         }
         if (introStorage.ableToType) {
-            introStorage.text += key;
+            if (introStorage.text.length < 40) {
+              introStorage.text += key;
+            }
+            
         }
         
     }
