@@ -161,6 +161,7 @@ document.onkeydown = function(e) {
             introStorage.text = "";
             return;
         }
+        }
         if (introStorage.ableToType) {
             if (introStorage.text.length < 40) {
               introStorage.text += key;
