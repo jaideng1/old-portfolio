@@ -36,7 +36,6 @@ let introStorage = {
     textUnder: "",
     timerToClear: setTimeout(function() {
       introStorage.textUnder = "";
-      console.log(introStorage.timerToClear);
     }, 1),
     
 };
@@ -139,7 +138,10 @@ document.onkeydown = function(e) {
                 */
               } else {
                 //display message under
-                introStorage.timerToClear.clearTimeout();
+                try {
+                  introStorage.timerToClear.clearTimeout();
+                } catch (e) {
+                }
                 introStorage.textUnder = "Wrong passcode."
                 introStorage.timerToClear = setTimeout(function() {
                   introStorage.textUnder = "";
@@ -147,13 +149,20 @@ document.onkeydown = function(e) {
               }
             } else if (introStorage.text == "help") {
               //display message under
-              introStorage.timerToClear.clearTimeout();
+              try {
+                introStorage.timerToClear.clearTimeout();
+              } catch (e) {
+              }
+              
               introStorage.textUnder = "Enter passcode to website. EXAMPLE: 'pass password'."
               introStorage.timerToClear = setTimeout(function() {
                 introStorage.textUnder = "";
               }, 3000);
             } else {
-              introStorage.timerToClear.clearTimeout();
+              try {
+                introStorage.timerToClear.clearTimeout();
+              } catch (e) {
+              }
               introStorage.textUnder = "Command has either been disabled or does not exist.";
               introStorage.timerToClear = setTimeout(function() {
                 introStorage.textUnder = "";
