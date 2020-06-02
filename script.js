@@ -75,6 +75,7 @@ function draw() {
         textSize(30)
         textFont(cmdFontRegular);
         stroke(255);
+        fill(255);
         text("> " + introStorage.text + textbar, 50, 50);
     }
 }
