@@ -15,7 +15,7 @@ const HEIGHT = window.innerHeight - 20;
 
 //setup
 function setup() {
-    
+    document.body.style = "background-color: rgb(0,0,0);"
     if (inDevelopment) {
         strHTML = document.querySelector('#main-content').innerHTML;
         document.querySelector('#main-content').innerHTML = "<h2>Sorry!</h2><br/><h3>The website is still in development.<br/><a href=\"https://github.com/jaideng1\">To GitHub Page</a></h3>";
