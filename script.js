@@ -82,7 +82,7 @@ function draw() {
         text("WebOS v1.0.3, made by jaideng1. Type in 'help', or 'pass'.", 50, 50);
       
         if (introStorage.showTextBar) {
-          text("> " + introStorage.text + textbar, 50, 130);
+          text("webos:~ jaideng1$ " + introStorage.text + textbar, 50, 130);
         } else {
           text("> " + introStorage.text, 50, 130);
         }
