@@ -31,8 +31,8 @@ function setup() {
 let introStorage = {
     text: "",
     displayTextBar: true, //for blinking
-    ableToType: false,
-    showTextBar: false, //show textbar with typing thing
+    ableToType: true,
+    showTextBar: true, //show textbar with typing thing
     textUnder: "",
 };
 
