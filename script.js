@@ -60,7 +60,7 @@ let blacklistKeys = [
 
 function draw() {
     if (inIntro) {
-        background(255);
+        background(0);
         frame++;
         let textbar = "";
         if (frame % 120 == 0) {
@@ -73,6 +73,7 @@ function draw() {
         }
         textSize(30)
         textFont(cmdFontRegular);
+        stroke(255);
         text("> " + introStorage.text + textbar, 50, 50);
     }
 }
