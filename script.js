@@ -99,7 +99,7 @@ function draw() {
 }
 
 //haha, laugh at me all you want. i know this is unsecure alright? i just want a tiny bit of protection.
-const PASS_TO_WEBSITE = "J41D3NGI";
+const PASS_TO_WEBSITE = " J41D3NGI";
 
 document.onkeydown = function(e) {
     var key = e.key;
@@ -120,8 +120,9 @@ document.onkeydown = function(e) {
             if (introStorage.text == "") {
               return;
             }
-            if (introStorage.text == "pass ") {
-              let p = introStorage.text.replace('pass ', '');
+            let bp = introStorage.text.split('');
+            if (bp[0] == "p" && bp[1] == "a" && bp[2] == "s" && bp[3] == "s") {
+              let p = introStorage.text.replace('pass', '');
               if (p == PASS_TO_WEBSITE) {
                 //display text
                 /*
