@@ -84,7 +84,7 @@ function draw() {
         if (introStorage.showTextBar) {
           text("webos:~ jaideng1$ " + introStorage.text + textbar, 50, 130);
         } else {
-          text("> " + introStorage.text, 50, 130);
+          text("webos:~ jaideng1$ " + introStorage.text, 50, 130);
         }
         
         text(introStorage.textUnder, 50, 150);
