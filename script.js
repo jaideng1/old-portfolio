@@ -36,6 +36,7 @@ let introStorage = {
     textUnder: "",
     timerToClear: setTimeout(function() {
       introStorage.textUnder = "";
+      console.log(introStorage.timerToClear);
     }, 1),
     
 };
