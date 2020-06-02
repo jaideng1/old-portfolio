@@ -146,7 +146,7 @@ document.onkeydown = function(e) {
                 introStorage.textUnder = "Wrong passcode."
                 introStorage.timerToClear = setTimeout(function() {
                   introStorage.textUnder = "";
-                }, 1500);
+                }, 3000);
               }
             } else if (introStorage.text == "help") {
               //display message under
@@ -158,7 +158,7 @@ document.onkeydown = function(e) {
               introStorage.textUnder = "Enter passcode to website. EXAMPLE: 'pass password'."
               introStorage.timerToClear = setTimeout(function() {
                 introStorage.textUnder = "";
-              }, 3000);
+              }, 4000);
             } else {
               try {
                 introStorage.timerToClear.clearTimeout();
@@ -167,7 +167,7 @@ document.onkeydown = function(e) {
               introStorage.textUnder = "Command has either been disabled or does not exist.";
               introStorage.timerToClear = setTimeout(function() {
                 introStorage.textUnder = "";
-              }, 1500);
+              }, 3000);
             }
             introStorage.text = "";
             return;
