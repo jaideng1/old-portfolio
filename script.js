@@ -125,6 +125,26 @@ document.onkeydown = function(e) {
               let p = introStorage.text.replace('pass', '');
               if (p == PASS_TO_WEBSITE) {
                 //display text
+                introStorage.ableToType = false;
+                introStorage.showTextBar = false;
+                introStorage.textUnder = "Password correct.";
+                let addonTextBySlow = "Joining";
+                let onAT = 0;
+                for (let i = 0; i < addonTextBySlow.split('').length; i++) {
+                  setTimeout(function() {
+                    introStorage.textUnder += addonTextBySlow.split('')[onAT];
+                    onAT += 1;
+                  }, (750/addonTextBySlow.split('').length) * (i+1));
+                }
+                setTimeout(function() {
+                  introStorage.textUnder += ".";
+                }, 775);
+                setTimeout(function() {
+                  introStorage.textUnder += ".";
+                }, 775 + 250);
+                setTimeout(function() {
+                  introStorage.textUnder += ".";
+                }, 775 + (250 * 2));
                 /*
                 Password correct.
                 <wait 750 milliseconds>
