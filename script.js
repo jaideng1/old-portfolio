@@ -1,3 +1,7 @@
+//
+// Made by Jaideng1
+//
+
 
 const inDevelopment = false;
 var mainContent = "";
