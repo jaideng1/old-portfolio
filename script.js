@@ -146,7 +146,7 @@ document.onkeydown = function(e) {
                       bckColor.r += 1;
                       bckColor.g += 1;
                       bckColor.b += 1;
-                    }, 2500 + (((5000-2500) / 255) * (i + 1)));
+                    }, 2500 + (((3000) / 255) * (i + 1)));
                   }
                   setTimeout(function() {
                     introStorage.textUnder += ".";
