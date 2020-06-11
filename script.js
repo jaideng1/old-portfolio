@@ -128,23 +128,26 @@ document.onkeydown = function(e) {
                 introStorage.ableToType = false;
                 introStorage.showTextBar = false;
                 introStorage.textUnder = "Password correct.";
-                let addonTextBySlow = " Joining";
-                let onAT = 0;
-                for (let i = 0; i < addonTextBySlow.split('').length; i++) {
+                setTimeout(function() {
+                  let addonTextBySlow = " Joining";
+                  let onAT = 0;
+                  for (let i = 0; i < addonTextBySlow.split('').length; i++) {
+                    setTimeout(function() {
+                      introStorage.textUnder += addonTextBySlow.split('')[onAT];
+                      onAT += 1;
+                    }, (2000/addonTextBySlow.split('').length) * (i+1));
+                  }
                   setTimeout(function() {
-                    introStorage.textUnder += addonTextBySlow.split('')[onAT];
-                    onAT += 1;
-                  }, (2000/addonTextBySlow.split('').length) * (i+1));
-                }
-                setTimeout(function() {
-                  introStorage.textUnder += ".";
-                }, 900);
-                setTimeout(function() {
-                  introStorage.textUnder += ".";
-                }, 1750);
-                setTimeout(function() {
-                  introStorage.textUnder += ".";
-                }, 3000);
+                    introStorage.textUnder += ".";
+                  }, 900);
+                  setTimeout(function() {
+                    introStorage.textUnder += ".";
+                  }, 1750);
+                  setTimeout(function() {
+                    introStorage.textUnder += ".";
+                  }, 3000);
+                }, 1200)
+                
                 /*
                 Password correct.
                 <wait 750 milliseconds>
