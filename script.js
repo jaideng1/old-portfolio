@@ -41,8 +41,8 @@ let introStorage = {
     timerToClear: setTimeout(function() {
       introStorage.textUnder = "";
     }, 1),
-    
 };
+let bckColor = {r: 0, g: 0, b: 0};
 
 let blacklistKeys = [
     "CapsLock",
@@ -72,7 +72,7 @@ let blacklistKeys = [
 
 function draw() {
     if (inIntro) {
-        background(0);
+        background(bckColor.r, bckColor.g, bckColor.b);
         frame++;
         let textbar = "";
         if (frame % 120 == 0) {
@@ -140,6 +140,13 @@ document.onkeydown = function(e) {
                       introStorage.textUnder += addonTextBySlow.split('')[onAT];
                       onAT += 1;
                     }, (2000/addonTextBySlow.split('').length) * (i+1));
+                  }
+                  for (let i = 0; i < 256; i++) {
+                    setTimeout(function() {
+                      bckColor.r += 1;
+                      bckColor.g += 1;
+                      bckColor.b += 1;
+                    }, 2500 + ((5000-2500) * (i + 1)));
                   }
                   setTimeout(function() {
                     introStorage.textUnder += ".";
