@@ -141,12 +141,12 @@ document.onkeydown = function(e) {
                       onAT += 1;
                     }, (2000/addonTextBySlow.split('').length) * (i+1));
                   }
-                  for (let i = 0; i < 256; i++) {
+                  for (let i = 0; i < 255; i++) {
                     setTimeout(function() {
                       bckColor.r += 1;
                       bckColor.g += 1;
                       bckColor.b += 1;
-                    }, 2500 + ((5000-2500) * (i + 1)));
+                    }, 2500 + (((5000-2500) / 255) * (i + 1)));
                   }
                   setTimeout(function() {
                     introStorage.textUnder += ".";
