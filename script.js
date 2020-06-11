@@ -139,13 +139,13 @@ document.onkeydown = function(e) {
                   }
                   setTimeout(function() {
                     introStorage.textUnder += ".";
-                  }, 900);
+                  }, 2900);
                   setTimeout(function() {
                     introStorage.textUnder += ".";
-                  }, 1750);
+                  }, 3750);
                   setTimeout(function() {
                     introStorage.textUnder += ".";
-                  }, 3000);
+                  }, 5000);
                 }, 1200)
                 
                 /*
