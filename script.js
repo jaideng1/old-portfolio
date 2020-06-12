@@ -109,7 +109,12 @@ function draw() {
     } else if (drawcmpScreen) {
       background(bckColor.r, bckColor.g, bckColor.b);
       image(windowbackground, 0, 0, WIDTH + 1, HEIGHT + 1);
-      rect(0, HEIGHT - 40, WIDTH, 40);
+      fill(0);
+      rect(0, HEIGHT - 70, WIDTH, 70);
+      fill(92);
+      rect(5, HEIGHT - 70, 70, 70);
+      rect(100, HEIGHT - 70, 70, 70);
+      rect(195, HEIGHT - 70, 70, 70);
     }
 }
 
