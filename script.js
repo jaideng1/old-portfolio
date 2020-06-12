@@ -9,12 +9,14 @@ var frame = 0;
 var inIntro = true;
 
 let mousepointer = {img: null, x: 0, y: 0}
+let windowbackground;
 
 //preload
 let cmdFontRegular;
 function preload() {
   cmdFontRegular = loadFont('assets/Source_Code_Pro/SourceCodePro-Regular.ttf');
-  mousepointer.img = loadImage('assets/MousePointer.jpg');
+  mousepointer.img = loadImage('assets/MousePointer.png');
+  windowbackground = loadImage('assets/xpbackground.jpg');
 }
 
 const WIDTH = window.innerWidth - 20;
@@ -106,7 +108,8 @@ function draw() {
         
     } else if (drawcmpScreen) {
       background(bckColor.r, bckColor.g, bckColor.b);
-      
+      image(windowbackground, 0, 0, WIDTH + 1, HEIGHT + 1);
+      rect(0, HEIGHT - 40, WIDTH, 40);
     }
 }
 
