@@ -8,10 +8,13 @@ var mainContent = "";
 var frame = 0;
 var inIntro = true;
 
+let mousepointer = {img: null, x: 0, y: 0}
+
 //preload
 let cmdFontRegular;
 function preload() {
   cmdFontRegular = loadFont('assets/Source_Code_Pro/SourceCodePro-Regular.ttf');
+  mousepointer.img = loadImage('assets/MousePointer.jpg');
 }
 
 const WIDTH = window.innerWidth - 20;
@@ -41,7 +44,9 @@ let introStorage = {
     timerToClear: setTimeout(function() {
       introStorage.textUnder = "";
     }, 1),
+    
 };
+let drawcmpScreen = false;
 let bckColor = {r: 0, g: 0, b: 0};
 
 let blacklistKeys = [
@@ -99,6 +104,9 @@ function draw() {
         
         text(introStorage.textUnder, 50, 210);
         
+    } else if (drawcmpScreen) {
+      background(bckColor.r, bckColor.g, bckColor.b);
+      
     }
 }
 
@@ -157,15 +165,28 @@ document.onkeydown = function(e) {
                   setTimeout(function() {
                     introStorage.textUnder += ".";
                   }, 5000);
+                  
+                  setTimeout(function() {
+                    drawcmpScreen = true;
+                    inIntro = false;
+                    bckColor.r = 48;
+                    bckColor.g = 86;
+                    bckColor.b = 151;
+                  },8500)
                 }, 1200)
                 
                 /*
                 Password correct.
                 <wait 750 milliseconds>
                 Joining <250mi> . <250mi> . <250mi> . (in this time, background fades to white)
+                
+                / ------- skip
                 <do join animation>
                 (mouse comes out of corner, "clicks" on bottom right, and "drags" over to top left, as if it's selecting something in an image)
                 (delete key sound plays, as the white thing dissapears, making windows computer appear)
+                / ------- end skip (too hard to do oof, i can try adding it at the end though)
+                
+                (computer screen appears)
                 (mouse goes to finder, opens it, and finder window appears)
                 (clicks on "reboot_to_website.exe", and then screen goes to black, turns back on after 5 seconds, and shows window reboot thing.)
                 (after 5 seconds, it stops, and fades to white)
