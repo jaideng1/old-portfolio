@@ -107,11 +107,12 @@ function draw() {
         text(introStorage.textUnder, 50, 210);
         
     } else if (drawcmpScreen) {
+      noStroke();
       background(bckColor.r, bckColor.g, bckColor.b);
       image(windowbackground, 0, 0, WIDTH + 1, HEIGHT + 1);
-      fill(0);
+      fill(36);
       rect(0, HEIGHT - 70, WIDTH, 70);
-      fill(92);
+      fill(54);
       rect(5, HEIGHT - 70, 70, 70);
       rect(100, HEIGHT - 70, 70, 70);
       rect(195, HEIGHT - 70, 70, 70);
