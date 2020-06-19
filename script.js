@@ -109,7 +109,7 @@ function draw() {
     } else if (drawcmpScreen) {
       noStroke();
       background(bckColor.r, bckColor.g, bckColor.b);
-      image(windowbackground, 0, 0, WIDTH + 1, HEIGHT + 1);
+      image(windowbackground, 0, 0, WIDTH + 1, HEIGHT + 1 - 70);
       fill(36);
       rect(0, HEIGHT - 70, WIDTH, 70);
       fill(54);
