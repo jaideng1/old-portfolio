@@ -1,4 +1,4 @@
-# jaideng1
+# jaiden g
 **My portfolio, basically.**
 Go [*here*](https://jaideng1.github.io) for the website.
 
