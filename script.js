@@ -33,7 +33,7 @@ var markNameTracker = {
   unmarked: "jaiden g."
 };
 function markName() {
-  document.querySelector("#name").innerHTML = "";
+  //document.querySelector("#name").innerHTML = "";
   for (let i = 0; i < markNameTracker.unmarked.split().length; i++) {
     setTimeout(() => {
       markNameTracker.marked = markNameTracker.unmarked.split()[0];
@@ -41,7 +41,7 @@ function markName() {
       changedUnmarked[0] = "";
       markNameTracker.unmarked = changedUnmarked.join('');
       document.querySelector("#name").innerHTML = "<mark>" + markNameTracker.marked + "</mark>" + markNameTracker.unmarked;
-    }, (i * 50) + 100);
+    }, ((i + 1) * 50) + 125);
   }
 }
 
