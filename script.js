@@ -47,15 +47,17 @@ function fadeInLinks() {
 */
 function loadProjects() {
   let chosenProjects = [];
-  for (let i = 0; i < projects.length; i++) {
-    if (Math.floor(Math.random() * 2) == 1 && chosenProjects.length < 3) {
-        chosenProjects.push(projects[i]);
-    }
+  let chosenNumbers = [];
+  for (let i = 0; i < 3; i++) {
+    let randomNum;
+    do {
+      randomNum = Math.floor(Math.random() * projects.length);
+    } while (chosenNumbers.includes(randomNum))
+    chosenProjects.push(randomNum);
   }
   
-  let featuredProjects = document.getElementsByClassName("featured-projects");
+  let featuredProjects = document.getElementsByClassName("featured-project");
   for (let j = 0; j < chosenProjects.length; j++) {
-    debugger;
     featuredProjects[j].children[0] = chosenProjects[j].title;
     featuredProjects[j].children[1] = chosenProjects[j].description;
   }
