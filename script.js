@@ -23,6 +23,7 @@ function init() {
   loadProjects();
   fadeInLinks();
   markName();
+  loadYears();
 }
 
 /*
@@ -46,6 +47,16 @@ function markName() {
       document.querySelector("#name").innerHTML = "<mark>" + markNameTracker.marked + "</mark>" + markNameTracker.unmarked;
     }, ((i + 1) * 85) + 240);
   }
+}
+
+/*
+@loadYears
+*/
+function loadYears() {
+  let date = new Date();
+  let year = date.getFullYear();
+  document.getElementById("current-year").textContent = year;
+  document.getElementById("years-coding").textContent = (year - 2012);
 }
 
 /*
