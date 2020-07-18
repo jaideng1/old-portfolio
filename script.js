@@ -44,7 +44,7 @@ function markName() {
       console.log(markNameTracker.marked);
       console.log("---------------")
       document.querySelector("#name").innerHTML = "<mark>" + markNameTracker.marked + "</mark>" + markNameTracker.unmarked;
-    }, ((i + 1) * 50) + 125);
+    }, ((i + 1) * 85) + 240);
   }
 }
 
