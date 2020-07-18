@@ -11,7 +11,9 @@ function init() {
 function fadeInLinks() {
   console.log("fade in links called")
   setTimeout(function() {
+    console.log("starting the start of fade in")
     let linkElements = document.querySelector("#social-links").children;
+    console.log(linkElements.length)
     
     for (let j = 0; j < linkElements[j]; j++) {
       for (let i = 0; i < 100; i++) {
