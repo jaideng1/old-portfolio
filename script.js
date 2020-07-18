@@ -22,6 +22,27 @@ var projects = [
 function init() {
   loadProjects();
   fadeInLinks();
+  markName();
+}
+
+/*
+@markName
+*/
+var markNameTracker = {
+  marked: "",
+  unmarked: "jaiden g."
+};
+function markName() {
+  document.querySelector("#name").innerHTML = "";
+  for (let i = 0; i < unmarked.split().length; i++) {
+    setTimeout(() => {
+      markNameTracker.marked = markNameTracker.unmarked.split()[0];
+      let changedUnmarked = unmarked.split();
+      changedUnmarked[0] = "";
+      markNameTracker.unmarked = changedUnmarked.join('');
+      document.querySelector("#name").innerHTML = "<mark>" + markNameTracker.marked + "</mark>" + markNameTracker.unmarked;
+    }, (i * 50) + 100);
+  }
 }
 
 /*
@@ -35,7 +56,7 @@ function fadeInLinks() {
       for (let i = 0; i < 100; i++) {
         setTimeout(() => {
           linkElements[j].style = "opacity: " + ((i + 1) / 100) + ";";
-        }, ((i + 1) * 10) + (j * 350));
+        }, ((i + 1) * 10) + (j * 350) + 200);
       }
     }
     
@@ -61,7 +82,6 @@ function loadProjects() {
   for (let j = 0; j < chosenProjects.length; j++) {
     featuredProjects[j].children[0].innerHTML = chosenProjects[j].title;
     featuredProjects[j].children[1].innerHTML = chosenProjects[j].description;
-    console.log(featuredProjects[j].children[0]);
   }
 }
 
