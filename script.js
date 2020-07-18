@@ -21,7 +21,7 @@ function fadeInLinks() {
         console.log("waiting " + ((i + 1) * 10) + (j * 250))
         setTimeout(() => {
           console.log("setting opacity to " + ((i + 1) * 100))
-          linkElements[j].style = "opacity: " + ((i + 1) * 100) + ";";
+          linkElements[j].style = "opacity: " + ((i + 1) / 100) + ";";
         }, ((i + 1) * 10) + (j * 250));
       }
     }
