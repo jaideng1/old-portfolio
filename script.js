@@ -41,7 +41,7 @@ function markName() {
       changedUnmarked[0] = "";
       markNameTracker.unmarked = changedUnmarked.join('');
       document.querySelector("#name").innerHTML = "<mark>" + markNameTracker.marked + "</mark>" + markNameTracker.unmarked;
-    }, ((i + 1) * 50) + 125);
+    }, ((i + 1) * 300) + 125);
   }
 }
 
