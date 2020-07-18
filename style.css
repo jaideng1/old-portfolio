@@ -1,5 +1,7 @@
 
-.featured-project-p {
-  font-size: 13px;
+.jumbotron {
+  .featured-project p {
+    font-size: 13px;
+  }
 }
 
