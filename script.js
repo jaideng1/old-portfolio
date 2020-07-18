@@ -15,7 +15,7 @@ function fadeInLinks() {
     let linkElements = document.querySelector("#social-links").children;
     console.log(linkElements.length)
     
-    for (let j = 0; j < linkElements[j]; j++) {
+    for (let j = 0; j < linkElements[j].length; j++) {
       for (let i = 0; i < 100; i++) {
         console.log("waiting " + ((i + 1) * 10) + (j * 250))
         setTimeout(() => {
