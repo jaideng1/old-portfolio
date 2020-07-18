@@ -14,7 +14,9 @@ function fadeInLinks() {
     
     for (let j = 0; j < linkElements[j]; j++) {
       for (let i = 0; i < 100; i++) {
+        console.log("waiting " + ((i + 1) * 10) + (j * 250))
         setTimeout(() => {
+          console.log("setting opacity to " + ((i + 1) * 100))
           linkElements[j].style = "opacity: " + ((i + 1) * 100) + ";";
         }, ((i + 1) * 10) + (j * 250));
       }
