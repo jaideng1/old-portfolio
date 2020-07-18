@@ -53,7 +53,8 @@ function loadProjects() {
     do {
       randomNum = Math.floor(Math.random() * projects.length);
     } while (chosenNumbers.includes(randomNum))
-    chosenProjects.push(randomNum);
+    chosenNumbers.push(randomNum);
+    chosenProjects.push(projects[randomNum]);
   }
   
   let featuredProjects = document.getElementsByClassName("featured-project");
