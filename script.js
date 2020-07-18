@@ -34,10 +34,10 @@ var markNameTracker = {
 };
 function markName() {
   //document.querySelector("#name").innerHTML = "";
-  for (let i = 0; i < markNameTracker.unmarked.split().length; i++) {
+  for (let i = 0; i < markNameTracker.unmarked.split('').length; i++) {
     setTimeout(() => {
-      markNameTracker.marked += markNameTracker.unmarked.split()[0];
-      let changedUnmarked = markNameTracker.unmarked.split();
+      markNameTracker.marked += markNameTracker.unmarked.split('')[0];
+      let changedUnmarked = markNameTracker.unmarked.split('');
       changedUnmarked[0] = "";
       markNameTracker.unmarked = changedUnmarked.join('');
       console.log(markNameTracker.unmarked);
