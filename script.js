@@ -9,6 +9,7 @@ function init() {
 }
 
 function fadeInLinks() {
+  console.log("fade in links called")
   setTimeout(function() {
     let linkElements = document.querySelector("#social-links").children;
     
