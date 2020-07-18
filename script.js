@@ -1,36 +1,63 @@
+/*
+@varibles
+*/
+var projects = [
+  {
+    title: "...",
+    description: "what"
+  },
+  {
+    title: "Eyetracker",
+    description: "An eyetracker that runs on python. I originally wanted this to connected to Minecraft, but you have to have a good camera to run it."
+  },
+  {
+    title: "..",
+    description: "another one"
+  },
+];
 
-var links = {
-  
-};
-
+/*
+@init
+*/
 function init() {
   loadProjects();
   fadeInLinks();
 }
 
+/*
+@fadeInLinks
+*/
 function fadeInLinks() {
-  console.log("fade in links called")
   setTimeout(function() {
-    console.log("starting the start of fade in")
     let linkElements = document.querySelector("#social-links").children;
-    console.log(linkElements.length)
     
     for (let j = 0; j < linkElements.length; j++) {
-      console.log("linkElements element: " + j)
       for (let i = 0; i < 100; i++) {
-        console.log("waiting " + ((i + 1) * 10) + (j * 250))
         setTimeout(() => {
-          console.log("setting opacity to " + ((i + 1) * 100))
           linkElements[j].style = "opacity: " + ((i + 1) / 100) + ";";
-        }, ((i + 1) * 10) + (j * 250));
+        }, ((i + 1) * 10) + (j * 350));
       }
     }
     
   }, 750);
 }
 
+/*
+@loadProjects
+*/
 function loadProjects() {
+  let chosenProjects = [];
+  for (let i = 0; i < projects.length; i++) {
+    if (Math.floor(Math.random() * 2) == 1 && chosenProjects.length < 3) {
+        chosenProjects.push(projects[i]);
+    }
+  }
   
+  let featuredProjects = document.getElementsByClassName("featured-projects");
+  for (let j = 0; j < chosenProjects.length; j++) {
+    featuredProjects[j].children[0] = chosenProjects[j].title;
+    featuredProjects[j].children[1] = chosenProjects[j].description;
+  }
 }
 
 
