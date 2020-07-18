@@ -16,6 +16,7 @@ function fadeInLinks() {
     console.log(linkElements.length)
     
     for (let j = 0; j < linkElements[j].length; j++) {
+      console.log("linkElements element: " + j)
       for (let i = 0; i < 100; i++) {
         console.log("waiting " + ((i + 1) * 10) + (j * 250))
         setTimeout(() => {
