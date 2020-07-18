@@ -60,9 +60,10 @@ function loadProjects() {
   let featuredProjects = document.getElementsByClassName("featured-project");
   debugger;
   for (let j = 0; j < chosenProjects.length; j++) {
-    debugger;
     featuredProjects[j].children[0] = chosenProjects[j].title;
     featuredProjects[j].children[1] = chosenProjects[j].description;
+    console.log(featuredProjects[j].children[0]);
+    debugger;
   }
 }
 
