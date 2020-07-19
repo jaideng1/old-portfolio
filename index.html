@@ -11,7 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="opacity: 1;">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" style="opacity: 1;">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">WebSiteName</a>
@@ -76,5 +76,25 @@
     </div>
       
     <script src="script.js"></script>
+    <script>
+      var lastScrollTop = 0;
+      var opacityOfNavbar = 1;
+
+      // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+      element.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+         var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+         if (st > lastScrollTop){
+            if (opacityOfNavbar > 0) {
+              opacityOfNavbar -= 0.05;
+            }
+         } else {
+            if (opacityOfNavbar < 1) {
+              opacityOfNavbar += 0.05;
+            }
+         }
+         document.getElementById("navbar").style = "opacity: " + opacityOfNavbar + ";";
+         lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+      }, false);
+    </script>
   </body>
 </html>
