@@ -82,19 +82,20 @@
 
       // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
       document.body.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
-         var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-         if (st > lastScrollTop){
-            if (opacityOfNavbar > 0) {
-              opacityOfNavbar -= 0.05;
-            }
-         } else {
-            if (opacityOfNavbar < 1) {
-              opacityOfNavbar += 0.05;
-            }
-         }
-         document.getElementById("navbar").style = "opacity: " + opacityOfNavbar + ";";
-         console.log(lastScrollTop);
-         lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+          var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+          console.log("scrolling")
+          if (st > lastScrollTop){
+              if (opacityOfNavbar > 0) {
+                opacityOfNavbar -= 0.05;
+              }
+           } else {
+              if (opacityOfNavbar < 1) {
+                opacityOfNavbar += 0.05;
+              }
+           }
+           document.getElementById("navbar").style = "opacity: " + opacityOfNavbar + ";";
+           console.log(lastScrollTop);
+           lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
       }, false);
     </script>
   </body>
