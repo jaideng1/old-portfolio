@@ -161,7 +161,7 @@
     <br/>
     <br/>
     <br/>
-    <div class="container footer">
+    <div class="container footer w-100">
       <br/>
       <br/>
       <center>
@@ -187,20 +187,28 @@
     <script>
       var lastScrollTop = 0;
       var opacityOfNavbar = 1;
+      window.scrollBy(0, -99999);
 
       // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
       document.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
           var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-          console.log("scrolling")
-          if (st > lastScrollTop){
-              if (opacityOfNavbar > 0 && lastScrollTop > 40) {
-                opacityOfNavbar -= 0.05;
-              }
-           } else {
-              if (opacityOfNavbar < 1) {
-                opacityOfNavbar += 0.05;
-              }
-           }
+          
+          
+          if (st < 140) {
+            if (lastScrollTop < 40) {
+              opacityOfNavbar = 1;
+            } else {
+              //percent down
+               let pdown = ((140 - st) + 1) / 100;
+               if (pdown > 1) {
+                 pdown = 1;
+               }
+               opacityOfNavbar = pdown;
+             }
+          } else {
+            opacityOfNavbar = 0;
+          }
+          
            document.getElementById("navbar").style = "opacity: " + opacityOfNavbar + ";";
            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
       }, false);
