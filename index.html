@@ -193,7 +193,7 @@
           var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
           console.log("scrolling")
           if (st > lastScrollTop){
-              if (opacityOfNavbar > 0) {
+              if (opacityOfNavbar > 0 && lastScrollTop > 40) {
                 opacityOfNavbar -= 0.05;
               }
            } else {
@@ -202,7 +202,6 @@
               }
            }
            document.getElementById("navbar").style = "opacity: " + opacityOfNavbar + ";";
-           console.log(lastScrollTop);
            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
       }, false);
     </script>
