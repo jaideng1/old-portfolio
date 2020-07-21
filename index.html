@@ -187,10 +187,9 @@
     <script>
       var lastScrollTop = 0;
       var opacityOfNavbar = 1;
-      window.scrollBy(0, -99999);
+      //window.scrollBy(0, -99999); //used to scroll up
 
-      // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-      document.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+      window.addEventListener("scroll", function() {
           var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
           
           
