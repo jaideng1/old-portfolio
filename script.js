@@ -52,7 +52,7 @@ function markName() {
 function loadYears() {
   let date = new Date();
   let year = date.getFullYear();
-  document.getElementById("years").textContent = "I've been coding for " + (year - 2012) + " years as of " + year + ".";
+  document.getElementById("years").textContent = "I've been coding for " + (year - 2014) + " years as of " + year + ".";
 }
 
 /*
