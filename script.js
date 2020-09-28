@@ -8,7 +8,7 @@ var projects = [
   },
   {
     title: "Eyetracker",
-    description: "An eyetracker that runs on python. I originally wanted this to connected to Minecraft, but you have to have a good camera to run it."
+    description: "An eyetracker that runs on python. I originally wanted this to connected to Minecraft, but you have to have a good camera to run it, which I don't have."
   },
   {
     title: "..",
