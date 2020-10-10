@@ -35,9 +35,7 @@
       -ms-transform: scale(1.75); /* IE 9 */
       -webkit-transform: scale(1.15); /* Safari and Chrome */
       position: fixed;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      vertical-align: middle;
     }
   </style>
   <body>
@@ -77,12 +75,12 @@
     let ie1 = false;
     document.getElementById("imgexpandableone").onclick = function() {
       document.getElementById("imgexpandableone").classList.toggle("imgexpand");
-      setTimeout(function() {ie1 = true}, 200)
+      setTimeout(function() {ie1 = true}, 50)
     };
     document.onclick = function() {
       if (document.getElementById("imgexpandableone").classList.contains("imgexpand") && ie1) {
         document.getElementById("imgexpandableone").classList.toggle("imgexpand");
-        setTimeout(function() {ie1 = false}, 200)
+        setTimeout(function() {ie1 = false}, 50)
       }
     }
 //     document.getElementById("imgexpandableone").onmouseleave = function() {
