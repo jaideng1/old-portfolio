@@ -29,17 +29,11 @@
     }
     
     .imgexpand:hover{
-        color: #424242; 
-      -webkit-transition: all .1s ease-in;
-      -moz-transition: all .1s ease-in;
-      -ms-transition: all .1s ease-in;
-      -o-transition: all .1s ease-in;
-      transition: all .1s ease-in;
+      color: #424242; 
       opacity: 1;
       transform: scale(1.75);
       -ms-transform: scale(1.75); /* IE 9 */
       -webkit-transform: scale(1.15); /* Safari and Chrome */
-
     }
   </style>
   <body>
@@ -79,11 +73,11 @@
     document.getElementById("imgexpandableone").onclick = function() {
       document.getElementById("imgexpandableone").classList.toggle("imgexpand");
     };
-    document.getElementById("imgexpandableone").onmouseleave = function() {
-      if (document.getElementById("imgexpandableone").classList.contains("imgexpand")) {
-        document.getElementById("imgexpandableone").classList.toggle("imgexpand");
-      }
-    };
+//     document.getElementById("imgexpandableone").onmouseleave = function() {
+//       if (document.getElementById("imgexpandableone").classList.contains("imgexpand")) {
+//         document.getElementById("imgexpandableone").classList.toggle("imgexpand");
+//       }
+//     };
     </script>
   </body>
 </html>
