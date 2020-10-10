@@ -74,12 +74,15 @@
     </div>
     <!--<script src="script.js"></script>-->
     <script>
+    let ie1 = false;
     document.getElementById("imgexpandableone").onclick = function() {
       document.getElementById("imgexpandableone").classList.toggle("imgexpand");
+      setTimeout(function() {ie1 = true}, 200)
     };
     document.onclick = function() {
-      if (document.getElementById("imgexpandableone").classList.contains("imgexpand")) {
+      if (document.getElementById("imgexpandableone").classList.contains("imgexpand") && ie1) {
         document.getElementById("imgexpandableone").classList.toggle("imgexpand");
+        setTimeout(function() {ie1 = false}, 200)
       }
     }
 //     document.getElementById("imgexpandableone").onmouseleave = function() {
