@@ -73,6 +73,11 @@
     document.getElementById("imgexpandableone").onclick = function() {
       document.getElementById("imgexpandableone").classList.toggle("imgexpand");
     };
+    document.onclick = function() {
+      if (document.getElementById("imgexpandableone").classList.contains("imgexpand")) {
+        document.getElementById("imgexpandableone").classList.toggle("imgexpand");
+      }
+    }
 //     document.getElementById("imgexpandableone").onmouseleave = function() {
 //       if (document.getElementById("imgexpandableone").classList.contains("imgexpand")) {
 //         document.getElementById("imgexpandableone").classList.toggle("imgexpand");
