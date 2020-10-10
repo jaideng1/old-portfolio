@@ -1,0 +1,3 @@
+base: jaiden1.github.io
+git: github.com/jaideng1/jaideng1.github.io
+folder: /assets
