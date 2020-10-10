@@ -30,11 +30,11 @@
     
     .imgexpand:hover{
         color: #424242; 
-      -webkit-transition: all .3s ease-in;
-      -moz-transition: all .3s ease-in;
-      -ms-transition: all .3s ease-in;
-      -o-transition: all .3s ease-in;
-      transition: all .3s ease-in;
+      -webkit-transition: all .1s ease-in;
+      -moz-transition: all .1s ease-in;
+      -ms-transition: all .1s ease-in;
+      -o-transition: all .1s ease-in;
+      transition: all .1s ease-in;
       opacity: 1;
       transform: scale(1.75);
       -ms-transform: scale(1.75); /* IE 9 */
@@ -78,6 +78,11 @@
     <script>
     document.getElementById("imgexpandableone").onclick = function() {
       document.getElementById("imgexpandableone").classList.toggle("imgexpand");
+    };
+    document.getElementById("imgexpandableone").onmouseleave = function() {
+      if (document.getElementById("imgexpandableone").classList.contains("imgexpand")) {
+        document.getElementById("imgexpandableone").classList.toggle("imgexpand");
+      }
     };
     </script>
   </body>
