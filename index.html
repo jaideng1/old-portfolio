@@ -10,6 +10,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
+  <style>
+    .center-vert {
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  </style>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" style="opacity: 1;">
       <div class="container-fluid">
@@ -23,7 +29,7 @@
           <li><a href="/java-projects/java-projects.html">Java</a></li>
           <li><a href="/csharp-projects/csharp-projects.html">C#</a></li>
           <!--Search Bar-->
-          <li><input type="text" class="form-control float-right" aria-label="Default" aria-describedby="inputGroup-sizing-default"></li>
+          <li><input type="text" class="form-control float-right center-vert" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Search..."></li>
           
         </ul>
       </div>
