@@ -5,6 +5,6 @@ searchbar.addEventListener('input', openSearchBar);
 
 function openSearchBar(e) {
   if (searchbar.value.length > 0) {
-    document.location.href = "/search";
+    document.location.href = "/search.html";
   }
 }
