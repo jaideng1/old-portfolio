@@ -36,7 +36,7 @@ function checkElements(search) {
     for (let i = 0; i < searchTerms.length; i++) {
       let keywords = search.split(" ");
       for (let j = 0; j < keywords.length; i++) {
-        if (searchTerms[i].contains(keywords[i])) {
+        if (searchTerms[i].includes(keywords[i])) {
           results.push(searchTerms[i]);
           break;
         }
