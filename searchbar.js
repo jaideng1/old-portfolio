@@ -24,6 +24,14 @@ function openSearchBar(e) {
 
 var searchTerms = ["Test", "Cock", "Ball", "PP", "Yes", "No", "verylongword"];
 
-$('#form-autocomplete').mdbAutocomplete({
-data: searchTerms
+jQuery(document).ready(function($) {
+        $("#searchbar").autocomplete({
+            source: searchTerms,
+            minLength:2,
+            position: { offset:'-30 0' },  
+//             select: function(event, ui ) { 
+//                     goTo(ui.item.value);
+//                     return false;
+//             }        
+    }); 
 });
