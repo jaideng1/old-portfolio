@@ -21,3 +21,9 @@ function openSearchBar(e) {
     searchbar.classList.add("searchbar-small");
   }
 }
+
+var searchTerms = ["Test", "Cock", "Ball", "PP", "Yes", "No", "verylongword"];
+
+$('#form-autocomplete').mdbAutocomplete({
+data: searchTerms
+});
