@@ -8,7 +8,7 @@ var hasBeenBigger = false;
 
 function searchBarUpdate(e) {
   openSearchBar(e);
-  checkElements(searchbar.value)
+  checkElements(searchbar.value.toLowerCase())
 }
 
 function openSearchBar(e) {
@@ -36,7 +36,7 @@ function checkElements(search) {
     for (let i = 0; i < searchTerms.length; i++) {
       let keywords = search.split(" ");
       for (let j = 0; j < keywords.length; i++) {
-        if (searchTerms[i].includes(keywords[i])) {
+        if (searchTerms[i].toLowerCase().includes(keywords[j])) {
           results.push(searchTerms[i]);
           break;
         }
