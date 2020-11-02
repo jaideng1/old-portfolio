@@ -22,16 +22,21 @@ function openSearchBar(e) {
   }
 }
 
-var searchTerms = ["Test", "Cock", "Ball", "PP", "Yes", "No", "verylongword"];
+var searchTerms = ["Test", "LetterA","Foo","Foe","LongWord","Word with Spaces", "123 Numbers", "ç accents"];
 
-jQuery(document).ready(function($) {
-        $("#searchbar").autocomplete({
-            source: searchTerms,
-            minLength:2,
-            position: { offset:'-30 0' },  
-//             select: function(event, ui ) { 
-//                     goTo(ui.item.value);
-//                     return false;
-//             }        
-    }); 
-});
+function checkElements(search) {
+  if (searchbar.value.length > 1) {
+    let results = [];
+    for (let i = 0; i < searchTerms.length; i++) {
+      let keywords = search.split(" ");
+      for (let j = 0; j < keywords.length; i++) {
+        if (searchTerms[i].contains(keywords[i])) {
+          results.push(searchTerms[i]);
+          break;
+        }
+      }
+      
+    }
+    
+  }
+}
