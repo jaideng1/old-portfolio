@@ -48,7 +48,7 @@ function checkElements(search) {
     }
     let htmlResults = "";
     for (let k = 0; k < results.length; k++) {
-      htmlResults.push("<li><span>" + results[k] + "</span></li>");
+      htmlResults += "<li><span>" + results[k] + "</span></li>";
     }
     document.getElementById("search-results").innerHTML = htmlResults;
     
