@@ -1,9 +1,15 @@
 
 var searchbar = document.getElementById("searchbar");
 
-searchbar.addEventListener('input', openSearchBar);
+searchbar.addEventListener('input', searchBarUpdate);
+
 
 var hasBeenBigger = false;
+
+function searchBarUpdate(e) {
+  openSearchBar(e);
+  checkElements(searchbar.value)
+}
 
 function openSearchBar(e) {
   if (searchbar.value.length > 0) {
@@ -25,7 +31,7 @@ function openSearchBar(e) {
 var searchTerms = ["Test", "LetterA","Foo","Foe","LongWord","Word with Spaces", "123 Numbers", "ç accents"];
 
 function checkElements(search) {
-  if (searchbar.value.length > 1) {
+  if (search.length > 1) {
     let results = [];
     for (let i = 0; i < searchTerms.length; i++) {
       let keywords = search.split(" ");
