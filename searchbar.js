@@ -2,6 +2,7 @@
 var searchbar = document.getElementById("searchbar");
 
 searchbar.addEventListener('input', searchBarUpdate);
+searchbar.addEventListener('keyup', goToSearchTab);
 
 
 var hasBeenBigger = false;
