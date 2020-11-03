@@ -36,6 +36,8 @@ function setUpSearchTerms() {
   }
 }
 
+setUpSearchTerms();
+
 function checkElements(search) {
   if (search.length > 0) {
     let results = [];
