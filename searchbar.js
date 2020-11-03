@@ -31,7 +31,7 @@ function openSearchBar(e) {
 var searchTerms = ["Test", "LetterA","Foo","Foe","LongWord","Word with Spaces", "123 Numbers", "ç accents"];
 
 function checkElements(search) {
-  if (search.length > 1) {
+  if (search.length > 0) {
     let results = [];
     for (let i = 0; i < searchTerms.length; i++) {
       let keywords = search.split(" ");
@@ -41,11 +41,14 @@ function checkElements(search) {
           break;
         }
       }
-      
+
     }
     let htmlResults = "";
     for (let k = 0; k < results.length; k++) {
       htmlResults += "<div><span>" + results[k] + "</span></div>";
+    }
+    if (results.length == 0) {
+      htmlResults += "<div><span><i>No Results Found...</i></span></div>"
     }
     document.getElementById("search-results").innerHTML = htmlResults;
     
