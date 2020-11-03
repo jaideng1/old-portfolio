@@ -28,7 +28,13 @@ function openSearchBar(e) {
   }
 }
 
-var searchTerms = ["Test", "LetterA","Foo","Foe","LongWord","Word with Spaces", "123 Numbers", "ç accents"];
+var searchTerms = [];
+
+function setUpSearchTerms() {
+  for (let i = 0; i < projects.length; i++) {
+    searchTerms.push(projects[i].title);
+  }
+}
 
 function checkElements(search) {
   if (search.length > 0) {
