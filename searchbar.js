@@ -64,3 +64,9 @@ function checkElements(search) {
     document.getElementById("search-results").innerHTML = "";
   }
 }
+
+function goToSearchTab(e) {
+  if (e.keyCode === 13) {
+    document.location.href = "/search.html";
+  }
+}
