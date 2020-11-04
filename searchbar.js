@@ -3,6 +3,9 @@ var searchbar = document.getElementById("searchbar");
 
 searchbar.addEventListener('input', searchBarUpdate);
 searchbar.addEventListener('keyup', goToSearchTab);
+searchbar.addEventListener('click', onSearchbarClick);
+searchbar.addEventListener('mouseenter', onMouseOverSearchbar);
+searchbar.addEventListener('mouseleave', onMouseLeaveSearchbar);
 
 
 var hasBeenBigger = false;
@@ -69,5 +72,49 @@ function checkElements(search) {
 function goToSearchTab(e) {
   if (e.keyCode === 13) {
     document.location.href = "/search.html";
+  }
+}
+
+let overSearchbar = false;
+let searchbarActive = false;
+
+function onMouseOverSearchbar(e) {
+  overSearchbar = true;
+}
+
+function onMouseLeaveSearchbar(e) {
+  overSearchbar = false;
+}
+
+function onSearchbarClick(e) {
+  if (search.length > 0) {
+    let results = [];
+    for (let i = 0; i < searchTerms.length; i++) {
+      let keywords = search.split(" ");
+      for (let j = 0; j < keywords.length; j++) {
+        if (searchTerms[i].toLowerCase().includes(keywords[j])) {
+          results.push(searchTerms[i]);
+          break;
+        }
+      }
+
+    }
+    let htmlResults = "";
+    for (let k = 0; k < results.length; k++) {
+      htmlResults += "<div><span>" + results[k] + "</span></div>";
+    }
+    if (results.length == 0) {
+      htmlResults += "<div><span><i>No Results Found...</i></span></div>"
+    }
+    document.getElementById("search-results").innerHTML = htmlResults;
+    
+  } else {
+    document.getElementById("search-results").innerHTML = "";
+  }
+}
+
+function onBodyClick(e) {
+  if (!overSearchbar) {
+    document.getElementById("search-results").innerHTML = "";
   }
 }
