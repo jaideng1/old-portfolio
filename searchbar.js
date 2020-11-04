@@ -6,7 +6,7 @@ searchbar.addEventListener('keyup', goToSearchTab);
 searchbar.addEventListener('click', onSearchbarClick);
 searchbar.addEventListener('mouseenter', onMouseOverSearchbar);
 searchbar.addEventListener('mouseleave', onMouseLeaveSearchbar);
-
+document.body.addEventListener('click', onBodyClick);
 
 var hasBeenBigger = false;
 
@@ -87,6 +87,7 @@ function onMouseLeaveSearchbar(e) {
 }
 
 function onSearchbarClick(e) {
+  let search = searchbar.value;
   if (search.length > 0) {
     let results = [];
     for (let i = 0; i < searchTerms.length; i++) {
