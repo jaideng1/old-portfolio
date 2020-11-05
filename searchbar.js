@@ -57,7 +57,7 @@ function checkElements(search) {
     }
     let htmlResults = "";
     for (let k = 0; k < results.length; k++) {
-      htmlResults += "<div><span>" + results[k] + "</span></div>";
+      htmlResults += "<div onclick=\"onSearchTermClick('" + results[k] + "')\"><span>" + results[k] + "</span></div>";
     }
     if (results.length == 0) {
       htmlResults += "<div><span><i>No Results Found...</i></span></div>"
