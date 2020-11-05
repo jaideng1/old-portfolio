@@ -251,6 +251,8 @@
     <script>
       var lastScrollTop = 0;
       var opacityOfNavbar = 1;
+      var navbarHtml = "";
+      var hasGonePastPoint = false;
       window.scrollBy(0, -3); //used to scroll up
 
       window.addEventListener("scroll", function() {
@@ -273,6 +275,14 @@
           }
           
            document.getElementById("navbar").style = "opacity: " + opacityOfNavbar + ";";
+           if (opacityOfNavbar == 0) {
+             navbarHtml = document.getElementById("navbar").innerHTML + "";
+             document.getElementById("navbar").innerHTML = "";
+             hasGonePastPoint = true;
+           } else if (hasGonePastPoint) {
+             document.getElementById("navbar").innerHTML = navbarHtml;
+             hasGonePastPoint = false;
+           }
            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
       }, false);
     </script>
