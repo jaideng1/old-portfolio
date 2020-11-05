@@ -277,7 +277,9 @@
            document.getElementById("navbar").style = "opacity: " + opacityOfNavbar + ";";
            if (opacityOfNavbar == 0) {
              navbarHtml = document.getElementById("navbar").innerHTML + "";
+             console.log(navbarHtml)
              document.getElementById("navbar").innerHTML = "";
+             console.log(navbarHtml)
              hasGonePastPoint = true;
            } else if (hasGonePastPoint) {
              document.getElementById("navbar").innerHTML = navbarHtml;
