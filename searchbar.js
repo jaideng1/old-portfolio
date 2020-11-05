@@ -129,7 +129,10 @@ function onSearchTermClick(searchTerm) {
 }
 
 function onBodyClick(e) {
-  if (!overSearchbar) {
-    document.getElementById("search-results").innerHTML = "";
-  }
+  try {
+    if (!overSearchbar) {
+      document.getElementById("search-results").innerHTML = "";
+    }
+  } catch (ignored) {}
+  
 }
