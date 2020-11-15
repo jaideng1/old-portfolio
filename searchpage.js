@@ -42,7 +42,7 @@ function checkElements(search) {
     let htmlResults = "";
     for (let k = 0; k < results.length; k += 2) {
       //results[k]
-      console.log(results[k])
+      console.log((k) + " - " + results.length)
       htmlResults += '<div class="row align-items-center d-flex project-row">';
       if (k > results.length) {
         htmlResults +=     '<div class="col-sm-6 inverse-project">';
@@ -50,6 +50,7 @@ function checkElements(search) {
         htmlResults +=       '<p>' + results[k].description + '</p>';
         htmlResults +=     '</div>';
       }
+      console.log((k + 1) + " - " + results.length)
       if (k + 1 > results.length) {
         htmlResults +=     '<div class="col-sm-6 inverse-project">';
         htmlResults +=       '<h3><a href="' + results[k + 1].link + '">' + results[k + 1].title + '</a></h3>';
