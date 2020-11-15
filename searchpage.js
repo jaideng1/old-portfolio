@@ -60,10 +60,10 @@ function checkElements(search) {
     if (results.length == 0) {
       htmlResults += "<div><span><i>No Results Found...</i></span></div>"
     }
-    document.getElementById("search-results").innerHTML = htmlResults;
+    searchbarResults.innerHTML = htmlResults;
     
   } else {
-    document.getElementById("search-results").innerHTML = "";
+    searchbarResults.innerHTML = "";
   }
 }
 
@@ -100,7 +100,7 @@ function onSearchbarClick(e) {
 function onBodyClick(e) {
   try {
     if (!overSearchbar) {
-      document.getElementById("search-results").innerHTML = "";
+      searchbarResults.innerHTML = "";
     }
   } catch (ignored) {}
   
