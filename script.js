@@ -28,6 +28,11 @@ var projects = [
     link: "https://github.com/jaideng1/math-cardgame",
     description: "A card game that I made for school (that's meant to be played online). The rules are a bit complicated though."
   },
+  {
+    title: "3D Circles with Spheres",
+    link: "https://github.com/jaideng1/3d-circles",
+    description: "Testing out 3D objects with P5.js by using Spherical Coordinates"
+  },
   //PYTHON
   {
     title: "Eyetracker",
