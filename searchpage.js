@@ -44,19 +44,19 @@ function checkElements(search) {
       //results[k]
       console.log((k) + " - " + results.length)
       htmlResults += '<div class="row align-items-center d-flex project-row">';
-      if (k > results.length) {
+      //if (k > results.length) {
         htmlResults +=     '<div class="col-sm-6 inverse-project">';
         htmlResults +=       '<h3><a href="' + results[k].link + '">' + results[k].title + '</a></h3>';
         htmlResults +=       '<p>' + results[k].description + '</p>';
         htmlResults +=     '</div>';
-      }
-      console.log((k + 1) + " - " + results.length)
-      if (k + 1 > results.length) {
+      //}
+      //console.log((k + 1) + " - " + results.length)
+      //if (k + 1 > results.length) {
         htmlResults +=     '<div class="col-sm-6 inverse-project">';
         htmlResults +=       '<h3><a href="' + results[k + 1].link + '">' + results[k + 1].title + '</a></h3>';
         htmlResults +=       '<p>' + results[k + 1].description + '</p>';
         htmlResults +=     '</div>';
-      }
+      //}
       htmlResults +=   '</div>';
     }
     if (results.length == 0) {
