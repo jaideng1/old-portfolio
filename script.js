@@ -31,7 +31,7 @@ var projects = [
   {
     title: "3D Circles with Spheres",
     link: "https://github.com/jaideng1/3d-circles",
-    description: "Testing out 3D objects with P5.js by using Spherical Coordinates"
+    description: "Testing out 3D objects with P5.js by using Spherical Coordinates."
   },
   //PYTHON
   {
