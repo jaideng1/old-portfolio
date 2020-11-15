@@ -46,15 +46,19 @@ function checkElements(search) {
       htmlResults += '<div class="row align-items-center d-flex project-row">';
       //if (k > results.length) {
         htmlResults +=     '<div class="col-sm-6 inverse-project">';
-        htmlResults +=       '<h3><a href="' + results[k].link + '">' + results[k].title + '</a></h3>';
-        htmlResults +=       '<p>' + results[k].description + '</p>';
+        try {
+          htmlResults +=       '<h3><a href="' + results[k].link + '">' + results[k].title + '</a></h3>';
+          htmlResults +=       '<p>' + results[k].description + '</p>';
+        } catch(e) {}
         htmlResults +=     '</div>';
       //}
       //console.log((k + 1) + " - " + results.length)
       //if (k + 1 > results.length) {
         htmlResults +=     '<div class="col-sm-6 inverse-project">';
-        htmlResults +=       '<h3><a href="' + results[k + 1].link + '">' + results[k + 1].title + '</a></h3>';
-        htmlResults +=       '<p>' + results[k + 1].description + '</p>';
+        try {
+          htmlResults +=       '<h3><a href="' + results[k + 1].link + '">' + results[k + 1].title + '</a></h3>';
+          htmlResults +=       '<p>' + results[k + 1].description + '</p>';
+        } catch(e) {}
         htmlResults +=     '</div>';
       //}
       htmlResults +=   '</div>';
@@ -69,11 +73,11 @@ function checkElements(search) {
   }
 }
 
-function goToSearchTab(e) {
-  if (e.keyCode === 13) {
-    document.location.href = "/search.html";
-  }
-}
+// function goToSearchTab(e) {
+//   if (e.keyCode === 13) {
+//     document.location.href = "/search.html";
+//   }
+// }
 
 let overSearchbar = false;
 let searchbarActive = false;
@@ -99,11 +103,11 @@ function onSearchbarClick(e) {
 //   }
 // }
 
-function onBodyClick(e) {
-  try {
-    if (!overSearchbar) {
-      searchbarResults.innerHTML = "";
-    }
-  } catch (ignored) {}
+// function onBodyClick(e) {
+//   try {
+//     if (!overSearchbar) {
+//       searchbarResults.innerHTML = "";
+//     }
+//   } catch (ignored) {}
   
-}
+// }
