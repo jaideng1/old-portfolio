@@ -42,6 +42,7 @@ function checkElements(search) {
     let htmlResults = "";
     for (let k = 0; k < results.length; k += 2) {
       //results[k]
+      console.log(results[k])
       htmlResults += '<div class="row align-items-center d-flex project-row">';
       if (k > results.length) {
         htmlResults +=     '<div class="col-sm-6 inverse-project">';
