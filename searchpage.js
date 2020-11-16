@@ -7,7 +7,7 @@ searchbar.addEventListener('input', searchBarUpdate);
 searchbar.addEventListener('click', onSearchbarClick);
 searchbar.addEventListener('mouseenter', onMouseOverSearchbar);
 searchbar.addEventListener('mouseleave', onMouseLeaveSearchbar);
-document.body.addEventListener('click', onBodyClick);
+//document.body.addEventListener('click', onBodyClick);
 
 var hasBeenBigger = false;
 
