@@ -123,7 +123,7 @@ function onSearchbarClick(e) {
 function onSearchTermClick(searchTerm) {
   for (let prjct of projects) {
     if (prjct.title == searchTerm) {
-      document.location.href = prjct.link
+      window.open(prjct.link, '_blank');
     }
   }
 }
