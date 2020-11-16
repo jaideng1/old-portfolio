@@ -56,7 +56,7 @@ function checkElements(search) {
       //if (k + 1 > results.length) {
         htmlResults +=     '<div class="col-sm-6 inverse-project">';
         try {
-          htmlResults +=       '<h3><a href="' + results[k + 1].link + '">' + results[k + 1].title + '</a></h3>';
+          htmlResults +=       '<h3><a href="' + results[k + 1].link + '" target="blank_">' + results[k + 1].title + '</a></h3>';
           htmlResults +=       '<p>' + results[k + 1].description + '</p>';
         } catch(e) {}
         htmlResults +=     '</div>';
