@@ -142,7 +142,7 @@ function loadProjects() {
   
   let featuredProjects = document.getElementsByClassName("featured-project");
   for (let j = 0; j < chosenProjects.length; j++) {
-    featuredProjects[j].children[0].innerHTML = "<a href=\"" + chosenProjects[j].link + "\">" + chosenProjects[j].title + "</a>";
+    featuredProjects[j].children[0].innerHTML = "<a href=\"" + chosenProjects[j].link + "\" target=\"blank_\">" + chosenProjects[j].title + "</a>";
     featuredProjects[j].children[1].innerHTML = chosenProjects[j].description;
   }
 }
