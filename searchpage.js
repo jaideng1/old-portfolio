@@ -3,7 +3,7 @@ var searchbar = document.getElementById("searchbar");
 var searchbarResults = document.getElementById("searchresults");
 
 searchbar.addEventListener('input', searchBarUpdate);
-searchbar.addEventListener('keyup', goToSearchTab);
+//searchbar.addEventListener('keyup', goToSearchTab);
 searchbar.addEventListener('click', onSearchbarClick);
 searchbar.addEventListener('mouseenter', onMouseOverSearchbar);
 searchbar.addEventListener('mouseleave', onMouseLeaveSearchbar);
