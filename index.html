@@ -276,14 +276,14 @@
           
            document.getElementById("navbar").style = "opacity: " + opacityOfNavbar + ";";
            if (opacityOfNavbar == 0) {
-             navbarHtml = document.getElementById("navbar").innerHTML + "";
-             console.log(navbarHtml)
-             document.getElementById("navbar").innerHTML = "";
-             console.log(navbarHtml)
-             hasGonePastPoint = true;
+//              navbarHtml = document.getElementById("navbar").innerHTML + "";
+//              console.log(navbarHtml)
+//              document.getElementById("navbar").innerHTML = "";
+//              console.log(navbarHtml)
+//              hasGonePastPoint = true;
            } else if (hasGonePastPoint) {
-             document.getElementById("navbar").innerHTML = navbarHtml;
-             hasGonePastPoint = false;
+//              document.getElementById("navbar").innerHTML = navbarHtml;
+//              hasGonePastPoint = false;
            }
            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
       }, false);
