@@ -34,7 +34,12 @@ var projects = [
     title: "Google Script Games",
     link: "https://github.com/jaideng1/google-script-games",
     description: "Some games I made with Google Script."
-  }
+  },
+  {
+    title: "Google Script Spammer",
+    link: "https://github.com/jaideng1/google-script-spammer",
+    description: "An email spammer I made with Google Script."
+  },
   //PYTHON
   {
     title: "Eyetracker",
