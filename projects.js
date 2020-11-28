@@ -30,6 +30,11 @@ var projects = [
     link: "https://github.com/jaideng1/3d-circles",
     description: "Testing out 3D objects with P5.js by using Spherical Coordinates."
   },
+  {
+    title: "Google Script Games",
+    link: "https://github.com/jaideng1/google-script-games",
+    description: "Some games I made with Google Script."
+  }
   //PYTHON
   {
     title: "Eyetracker",
