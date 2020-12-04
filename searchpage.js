@@ -95,7 +95,7 @@ function onSearchbarClick(e) {
   checkElements(search);
 }
 
-// function onSearchTermClick(searchTerm) {
+// function oncchTermClick(searchTerm) {
 //   for (let prjct of projects) {
 //     if (prjct.title == searchTerm) {
 //       document.location.href = prjct.link
