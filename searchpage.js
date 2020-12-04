@@ -28,23 +28,22 @@ setUpSearchTerms();
 
 function checkElements(search) {
   if (search.length > 0) {
-    var type = document.getElementById("search-type").value;
+    var type = document.getElementById("search-type").value.toLowerCase();
     let results = [];
     for (let i = 0; i < searchTerms.length; i++) {
       let keywords = search.toLowerCase().split(" ");
       for (let j = 0; j < keywords.length; j++) {
-        console.log(type);
-        if (type == "Keywords") {
+        if (type == "keywords") {
             if (searchTerms[i].title.toLowerCase().includes(keywords[j])) {
               results.push(searchTerms[i]);
               break;
             }
-        } else if (type == "Tags") {
+        } else if (type == "tags") {
             if (searchTerms[i].tags.join(" ").toLowerCase().includes(keywords[j])) {
               results.push(searchTerms[i]);
               break;
             }
-        } else if (type == "Description") {
+        } else if (type == "description") {
             if (searchTerms[i].description.toLowerCase().includes(keywords[j])) {
               results.push(searchTerms[i]);
               break;
