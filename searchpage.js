@@ -152,3 +152,5 @@ function onSearchbarClick(e) {
 //   } catch (ignored) {}
   
 // }
+
+checkElements("");
