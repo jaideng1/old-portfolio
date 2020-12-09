@@ -86,6 +86,7 @@ function checkElements(search) {
     
   } else {
     let results = projects;
+    let htmlResults = "";
     for (let k = 0; k < results.length; k += 2) {
       //results[k]
       htmlResults += '<div class="row align-items-center d-flex project-row">';
@@ -111,6 +112,7 @@ function checkElements(search) {
       //}
       htmlResults +=   '</div>';
     }
+    searchbarResults.innerHTML = htmlResults;
   }
 }
 
