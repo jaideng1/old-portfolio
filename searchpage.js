@@ -73,7 +73,7 @@ function checkElements(search) {
         try {
           htmlResults +=       '<h3><a href="' + results[k + 1].link + '" target="_blank">' + results[k + 1].title + '</a></h3>';
           htmlResults +=       '<p>' + results[k + 1].description + '</p>';
-          htmlResults +=       '<p>Tags: ' + results[k].tags.join(", ") + '</p>';
+          htmlResults +=       '<p>Tags: ' + results[k + 1].tags.join(", ") + '</p>';
         } catch(e) {}
       
         htmlResults +=     '</div>';
