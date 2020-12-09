@@ -61,8 +61,9 @@ function checkElements(search) {
       //if (k > results.length) {
         htmlResults +=     '<div class="col-sm-6 inverse-project">';
         try {
-          htmlResults +=       '<h3><a href="' + results[k].link + '">' + results[k].title + '</a></h3>';
+          htmlResults +=       '<h3><a href="' + results[k].link + '" target="_blank">' + results[k].title + '</a></h3>';
           htmlResults +=       '<p>' + results[k].description + '</p>';
+          htmlResults +=       '<p>Tags: ' + results[k].tags.join(", ") + '</p>';
         } catch(e) {}
         htmlResults +=     '</div>';
       //}
@@ -70,9 +71,11 @@ function checkElements(search) {
       //if (k + 1 > results.length) {
         htmlResults +=     '<div class="col-sm-6 inverse-project">';
         try {
-          htmlResults +=       '<h3><a href="' + results[k + 1].link + '" target="blank_">' + results[k + 1].title + '</a></h3>';
+          htmlResults +=       '<h3><a href="' + results[k + 1].link + '" target="_blank">' + results[k + 1].title + '</a></h3>';
           htmlResults +=       '<p>' + results[k + 1].description + '</p>';
+          htmlResults +=       '<p>Tags: ' + results[k].tags.join(", ") + '</p>';
         } catch(e) {}
+      
         htmlResults +=     '</div>';
       //}
       htmlResults +=   '</div>';
