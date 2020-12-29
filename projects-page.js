@@ -34,7 +34,7 @@ function loadProjects() {
       htmlResults +=     '</div>';
     }
     htmlResults +=   '</center>';
-    prjcts = htmlResults;
+    prjcts.innerHTML = htmlResults;
 }
 
 function setLngAndRun(tol) {
