@@ -14,13 +14,13 @@ function loadProjects() {
     //results[k]
     htmlResults += '<div class="row align-items-center d-flex project-row">';
     //if (k > results.length) {
-      htmlResults +=     '<div class="col-sm-6 inverse-project">';
-      try {
-        htmlResults +=       '<h3><a href="' + results[k].link + '" target="_blank">' + results[k].title + '</a></h3>';
-        htmlResults +=       '<p>' + results[k].description + '</p>';
-        htmlResults +=       '<p>Tags: ' + results[k].tags.join(", ") + '</p>';
-      } catch(e) {}
-      htmlResults +=     '</div>';
+    htmlResults +=     '<div class="col-sm-6 inverse-project">';
+    try {
+      htmlResults +=       '<h3><a href="' + results[k].link + '" target="_blank">' + results[k].title + '</a></h3>';
+      htmlResults +=       '<p>' + results[k].description + '</p>';
+      htmlResults +=       '<p>Tags: ' + results[k].tags.join(", ") + '</p>';
+    } catch(e) {}
+    htmlResults +=     '</div>';
     //}
     //console.log((k + 1) + " - " + results.length)
     //if (k + 1 > results.length) {
@@ -32,7 +32,7 @@ function loadProjects() {
       } catch(e) {}
 
       htmlResults +=     '</div>';
-    //}
+    }
     htmlResults +=   '</center>';
     prjcts = htmlResults;
 }
