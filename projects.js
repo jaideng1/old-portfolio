@@ -58,6 +58,13 @@ var projects = [
     tags: ["back-end"],
     language: "js",
   },
+  {
+    title: "School Dismissal",
+    link: "https://github.com/jaideng1/School-Dismissal",
+    description: "A program that I made for my school for dismissal",
+    tags: ["back-end","school"],
+    language: "js",
+  },
   //PYTHON
   {
     title: "Eyetracker",
