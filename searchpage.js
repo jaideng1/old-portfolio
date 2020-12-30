@@ -58,7 +58,7 @@ function checkElements(search) {
       //results[k]
       htmlResults += '<div class="row align-items-center d-flex project-row">';
       //if (k > results.length) {
-        htmlResults +=     '<div class="col-sm-6 inverse-project">';
+        htmlResults +=     '<div class="col-sm-6 inverse-project hidden-project">';
         try {
           htmlResults +=       '<h3><a href="' + results[k].link + '" target="_blank">' + results[k].title + '</a></h3>';
           htmlResults +=       '<p>' + results[k].description + '</p>';
@@ -68,7 +68,7 @@ function checkElements(search) {
       //}
       //console.log((k + 1) + " - " + results.length)
       //if (k + 1 > results.length) {
-        htmlResults +=     '<div class="col-sm-6 inverse-project">';
+        htmlResults +=     '<div class="col-sm-6 inverse-project hidden-project">';
         try {
           htmlResults +=       '<h3><a href="' + results[k + 1].link + '" target="_blank">' + results[k + 1].title + '</a></h3>';
           htmlResults +=       '<p>' + results[k + 1].description + '</p>';
@@ -83,7 +83,15 @@ function checkElements(search) {
       htmlResults += "<div><span><i>No Results Found...</i></span></div>"
     }
     searchbarResults.innerHTML = htmlResults;
-    
+    let hidden = document.getElementsByClassName("hidden-project");
+    for (let n = 0; n < hidden.length; n++) {
+      let m = hidden[n];
+      setTimeout(function() {
+        m.classList.remove("hidden-project");
+        m.classList.add("shown-project");
+      }, 75 * n)
+      
+    }
   } else {
     let results = projects;
     let htmlResults = "";
