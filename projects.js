@@ -65,6 +65,13 @@ var projects = [
     tags: ["back-end","school"],
     language: "js",
   },
+  {
+    title: "A* Pathfinding",
+    link: "https://github.com/jaideng1/a_star-pathfinding",
+    description: "A pathfinder using A* Pathfinding.",
+    tags: ["math","game"],
+    language: "js",
+  },
   //PYTHON
   {
     title: "Eyetracker",
