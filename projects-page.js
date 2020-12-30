@@ -42,7 +42,7 @@ function loadProjects() {
       setTimeout(function() {
         m.classList.remove("hidden-project");
         m.classList.add("shown-project");
-      }, 50 * j)
+      }, 75 * j)
       
     }
 }
