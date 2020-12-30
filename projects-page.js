@@ -38,8 +38,12 @@ function loadProjects() {
   
     let hidden = document.getElementsByClassName("hidden-project");
     for (let j = 0; j < hidden.length; j++) {
-      hidden[j].classList.remove("hidden-project");
-      hidden[j].classList.add("shown-project");
+      let m = hidden[j];
+      setTimeout(function() {
+        m.classList.remove("hidden-project");
+        m.classList.add("shown-project");
+      }, 50 * j)
+      
     }
 }
 
