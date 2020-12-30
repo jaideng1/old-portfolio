@@ -14,7 +14,7 @@ function loadProjects() {
     //results[k]
     htmlResults += '<div class="row align-items-center d-flex project-row">';
     //if (k > results.length) {
-    htmlResults +=     '<div class="col-sm-6 inverse-project">';
+    htmlResults +=     '<div class="col-sm-6 inverse-project hidden-project">';
     try {
       htmlResults +=       '<h3><a href="' + results[k].link + '" target="_blank">' + results[k].title + '</a></h3>';
       htmlResults +=       '<p>' + results[k].description + '</p>';
@@ -24,7 +24,7 @@ function loadProjects() {
     //}
     //console.log((k + 1) + " - " + results.length)
     //if (k + 1 > results.length) {
-      htmlResults +=     '<div class="col-sm-6 inverse-project">';
+      htmlResults +=     '<div class="col-sm-6 inverse-project hidden-project">';
       try {
         htmlResults +=       '<h3><a href="' + results[k + 1].link + '" target="_blank">' + results[k + 1].title + '</a></h3>';
         htmlResults +=       '<p>' + results[k + 1].description + '</p>';
@@ -35,6 +35,12 @@ function loadProjects() {
     }
     htmlResults +=   '</center>';
     prjcts.innerHTML = htmlResults;
+  
+    let hidden = document.getElementsByClassName("hidden-project");
+    for (let j = 0; j < hidden.length; j++) {
+      hidden[j].classList.remove("hidden-project");
+      hidden[j].classList.add("shown-project");
+    }
 }
 
 function setLngAndRun(tol) {
