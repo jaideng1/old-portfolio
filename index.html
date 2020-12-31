@@ -136,6 +136,7 @@
               <p style="font-size: 16px;">Loading...</p>
             </div>
           </div>
+          <button onclick="document.location.href='/search.html'" id="tosearch">See the other (x-3) projects →</button>
         </div>
     </div>
     <br/>
@@ -290,6 +291,8 @@
            }
            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
       }, false);
+      
+      document.getElementById("tosearch").textContent = "See the other " + (projects.length - 3) + " projects →";
     </script>
   </body>
 </html>
