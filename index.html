@@ -302,7 +302,7 @@
            }
            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
             
-           let eles = document.getElementsWithClassName("fadesection");
+           let eles = document.getElementsByClassName("fadesection");
            for (let i = 0; i < eles.length; i++) {
              if (isInViewport(eles[i]) && eles[i].classList.contains("hiddenSection")) {
                eles[i].classList.remove("hiddenSection");
