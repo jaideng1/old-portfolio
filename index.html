@@ -320,6 +320,9 @@
                  document.getElementById("sdmsg").classList.add("fadeout");
                  scrollMsgHidden = false;
                }
+             } else if (!isInViewport(eles[i]) && eles[i].classList.contains("shownSection")) {
+               eles[i].classList.add("hiddenSection");
+               eles[i].classList.remove("shownSection");
              }
            }
       }, false);
