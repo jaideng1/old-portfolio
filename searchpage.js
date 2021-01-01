@@ -33,6 +33,9 @@ function checkElements(search) {
     for (let i = 0; i < searchTerms.length; i++) {
       let keywords = search.toLowerCase().split(" ");
       for (let j = 0; j < keywords.length; j++) {
+        if (keywords[j].length < 1) {
+          continue;
+        }
         if (type == "keywords") {
             if (searchTerms[i].title.toLowerCase().includes(keywords[j])) {
               results.push(searchTerms[i]);
