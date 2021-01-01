@@ -69,6 +69,12 @@
       opacity: 0;
     }
     
+    .hiddenFadeSection {
+      opacity: 0;
+      transition: 0.45s;
+      transition-timing-function: linear;
+    }
+    
     .shownSection {
       opacity: 1;
       transition: 0.45s;
@@ -313,15 +319,16 @@
             
            let eles = document.getElementsByClassName("fadesection");
            for (let i = 0; i < eles.length; i++) {
-             if (isInViewport(eles[i]) && eles[i].classList.contains("hiddenSection")) {
+             if (isInViewport(eles[i]) && (eles[i].classList.contains("hiddenSection") || eles[i].classList.contains("hiddenFadeSection"))) {
                eles[i].classList.remove("hiddenSection");
+               eles[i].classList.remove("hiddenFadeSection");
                eles[i].classList.add("shownSection");
                if (!scrollMsgHidden) {
                  document.getElementById("sdmsg").classList.add("fadeout");
                  scrollMsgHidden = false;
                }
              } else if (!isInViewport(eles[i]) && eles[i].classList.contains("shownSection")) {
-               eles[i].classList.add("hiddenSection");
+               eles[i].classList.add("hiddenFadeSection");
                eles[i].classList.remove("shownSection");
              }
            }
