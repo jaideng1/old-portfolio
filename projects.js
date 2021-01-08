@@ -78,7 +78,7 @@ var projects = [
     description: "Using the Nintendo Switch Controller on Mac.",
     tags: ["back-end"],
     language: "js"
-  }
+  },
   //PYTHON
   {
     title: "Eyetracker",
