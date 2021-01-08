@@ -72,6 +72,13 @@ var projects = [
     tags: ["math","game"],
     language: "js",
   },
+  {
+    title: "Nintendo Switch Controller to Mac",
+    link: "https://github.com/jaideng1/nintendo-switch-to-mac",
+    description: "Using the Nintendo Switch Controller on Mac.",
+    tags: ["back-end"],
+    language: "js"
+  }
   //PYTHON
   {
     title: "Eyetracker",
