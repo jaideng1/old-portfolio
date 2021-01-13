@@ -106,7 +106,7 @@
             
             </div>
           </li>
-          <li><button class="btn btn-primary" onclick="disablescrl()">Disable Scroll Effect</button></li>
+          <li><button class="btn btn-primary" onclick="disablescrl()" id="scrlbtn" style="float-right center-vert">Disable Scroll Effect</button></li>
           
         </ul>
       </div>
@@ -356,6 +356,12 @@
       function disablescrl() {
         doScroll = false;
         let eles = document.getElementsByClassName("fadesection");
+        if (!scrollMsgHidden) {
+           document.getElementById("sdmsg").classList.add("fadeout");
+           scrollMsgHidden = false;
+         }
+        document.getElementById("scrlbtn").style = "opacity: 0;";
+        document.getElementById("scrlbtn").disabled = "disabled";
         for (let i = 0; i < eles.length; i++) {
          if (eles[i].classList.contains("hiddenSection") || eles[i].classList.contains("hiddenFadeSection")) {
            setTimeout(function() {
