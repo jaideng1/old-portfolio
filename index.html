@@ -106,6 +106,7 @@
             
             </div>
           </li>
+          <li><button class="btn btn-primary" onclick="disablescrl()">Disable Scroll Effect</button></li>
           
         </ul>
       </div>
@@ -285,6 +286,8 @@
       
       var scrollMsgHidden = false;
       
+      var doScroll = true;
+      
       window.addEventListener("scroll", function() {
           var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
           
@@ -316,7 +319,9 @@
 //              hasGonePastPoint = false;
            }
            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-            
+           if (!doScroll) {
+             return;
+           }
            let eles = document.getElementsByClassName("fadesection");
            for (let i = 0; i < eles.length; i++) {
              if (isInViewport(eles[i]) && (eles[i].classList.contains("hiddenSection") || eles[i].classList.contains("hiddenFadeSection"))) {
@@ -347,6 +352,21 @@
               bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
           );
       };
+      
+      function disablescrl() {
+        doScroll = false;
+        let eles = document.getElementsByClassName("fadesection");
+        for (let i = 0; i < eles.length; i++) {
+         if (eles[i].classList.contains("hiddenSection") || eles[i].classList.contains("hiddenFadeSection")) {
+           setTimeout(function() {
+             eles[i].classList.remove("hiddenSection");
+             eles[i].classList.remove("hiddenFadeSection");
+             eles[i].classList.add("shownSection");
+           }, 75 * i);
+           
+         }
+        }
+      }
     </script>
   </body>
 </html>
