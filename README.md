@@ -1,6 +1,8 @@
 # jaiden g
-**My portfolio, basically.**
-Go [*here*](https://jaideng1.github.io) for the website.
+**My (OLD) portfolio, basically.**
+Go [*here*](https://jaideng1.github.io/old-portfolio) for the website.
+
+*THIS IS MY OLD PORTFOLIO! See the new one at https://jaideng1.github.io.*
 
 # About Me
 
